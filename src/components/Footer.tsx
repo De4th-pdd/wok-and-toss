@@ -25,7 +25,7 @@ export default function Footer() {
                 />
               </div>
               <span className="font-serif text-2xl font-bold tracking-tight text-warmPorcelain">
-                WOK & TOSS
+                WOK &amp; TOSS
               </span>
             </div>
             <p className="text-sm text-ricePaper/80 leading-relaxed font-sans">
@@ -59,20 +59,20 @@ export default function Footer() {
           {/* Col 2: Operating Hours & Contact */}
           <div className="space-y-4">
             <h3 className="font-serif text-lg font-semibold text-warmPorcelain tracking-wide border-l-2 border-roastedChilli pl-3">
-              Hours & Contact
+              Hours and contact
             </h3>
             <ul className="space-y-3 text-sm text-ricePaper/85 font-sans">
               <li className="flex items-start space-x-2.5">
                 <Clock className="w-4 h-4 text-toastedSesame mt-0.5 shrink-0" />
                 <div>
-                  <span className="block font-medium text-warmPorcelain">Kitchen Hours</span>
+                  <span className="block font-medium text-warmPorcelain">Kitchen hours</span>
                   <span className="text-xs text-ricePaper/70">{siteConfig.openingHoursDisplay}</span>
                 </div>
               </li>
               <li className="flex items-start space-x-2.5">
                 <Phone className="w-4 h-4 text-toastedSesame mt-0.5 shrink-0" />
                 <div>
-                  <span className="block font-medium text-warmPorcelain">WhatsApp Order Line</span>
+                  <span className="block font-medium text-warmPorcelain">WhatsApp line</span>
                   <a
                     href={siteConfig.whatsappUrl}
                     target="_blank"
@@ -86,8 +86,8 @@ export default function Footer() {
               <li className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-toastedSesame mt-0.5 shrink-0" />
                 <div>
-                  <span className="block font-medium text-warmPorcelain">Service Coverage</span>
-                  <span className="text-xs text-ricePaper/70">Rawalpindi & Islamabad (Twin Cities)</span>
+                  <span className="block font-medium text-warmPorcelain">Service coverage</span>
+                  <span className="text-xs text-ricePaper/70">Rawalpindi &amp; Islamabad (Twin Cities)</span>
                 </div>
               </li>
             </ul>
@@ -96,27 +96,27 @@ export default function Footer() {
           {/* Col 3: Navigation & Sections */}
           <div className="space-y-4">
             <h3 className="font-serif text-lg font-semibold text-warmPorcelain tracking-wide border-l-2 border-roastedChilli pl-3">
-              Explore Wok & Toss
+              Explore Wok &amp; Toss
             </h3>
             <ul className="space-y-2 text-sm text-ricePaper/80 font-sans">
               <li>
                 <Link href="/menu" className="hover:text-toastedSesame transition-colors">
-                  Complete Menu
+                  Complete menu
                 </Link>
               </li>
               <li>
                 <Link href="/spice-guide" className="hover:text-toastedSesame transition-colors">
-                  Signature Spice Guide
+                  Spice guide
                 </Link>
               </li>
               <li>
                 <Link href="/how-to-order" className="hover:text-toastedSesame transition-colors">
-                  How Ordering Works
+                  How ordering works
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-toastedSesame transition-colors">
-                  Service Area & About Us
+                  Service area &amp; about
                 </Link>
               </li>
               <li>
@@ -126,37 +126,43 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-roastedChilli hover:text-roastedChilli-light transition-colors font-medium flex items-center space-x-1"
                 >
-                  <span>Request Today&apos;s Menu</span>
-                  <span aria-hidden="true">&rarr;</span>
+                  <span>Request today&apos;s menu</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Twin Cities Local SEO Notice */}
+          {/* Col 4: Twin Cities Local Notice */}
           <div className="space-y-4">
             <h3 className="font-serif text-lg font-semibold text-warmPorcelain tracking-wide border-l-2 border-roastedChilli pl-3">
-              Twin Cities Delivery
+              Twin Cities delivery
             </h3>
             <p className="text-xs text-ricePaper/75 leading-relaxed font-sans">
-              Craving freshly cooked Chinese food in Islamabad or Rawalpindi? Send &quot;MENU&quot; on WhatsApp, specify your area and party size, and our team will share the latest availability and delivery arrangements.
+              Craving fresh Chinese food in Islamabad or Rawalpindi? Send &quot;MENU&quot; on WhatsApp, specify your area and party size, and our team will share the latest availability and delivery arrangements.
             </p>
             <div className="p-3 bg-smokedSoy-950/70 rounded-lg border border-toastedSesame/20 text-xs text-toastedSesame/90">
-              <span className="font-semibold block text-warmPorcelain">Direct Kitchen Ordering:</span>
-              No third-party markups. Transparent, authentic wok cooking delivered piping hot.
+              <span className="font-semibold block text-warmPorcelain">Direct kitchen ordering:</span>
+              No third-party markups. High-heat wok cooking delivered piping hot.
             </div>
           </div>
         </div>
 
-        {/* Bottom row: copyright and legal */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ricePaper/60 font-sans space-y-4 sm:space-y-0">
-          <div>
-            &copy; {currentYear} {siteConfig.name}. All rights reserved.
-          </div>
-          <div className="flex items-center space-x-6">
-            <span>Rawalpindi &amp; Islamabad, Pakistan</span>
-            <span className="text-toastedSesame">•</span>
-            <span>WhatsApp Ordering Only</span>
+        {/* Bottom Credits & Copyright */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ricePaper/60 font-sans gap-4">
+          <p>
+            &copy; {currentYear} Wok &amp; Toss Chinese Food. All rights reserved. Rawalpindi &amp; Islamabad, Pakistan.
+          </p>
+          <div className="flex items-center space-x-4">
+            <span>Daily 12:30 PM – 11:00 PM</span>
+            <span>•</span>
+            <a
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-toastedSesame hover:underline"
+            >
+              WhatsApp: {siteConfig.phoneDisplay}
+            </a>
           </div>
         </div>
       </div>

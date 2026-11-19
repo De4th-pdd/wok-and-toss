@@ -54,16 +54,16 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-ricePaper group-hover:text-toastedSesame transition-colors">
-                WOK & TOSS
+                WOK &amp; TOSS
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase font-sans text-toastedSesame/90 font-medium -mt-1">
-                Chinese Food • Rawalpindi & Islamabad
+              <span className="text-[11px] font-sans text-toastedSesame/90 font-medium -mt-1">
+                Chinese Food • Rawalpindi &amp; Islamabad
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -91,7 +91,7 @@ export default function Header() {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg text-ricePaper hover:text-warmPorcelain hover:bg-smokedSoy-50 focus:outline-none"
-              aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,7 +102,7 @@ export default function Header() {
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-toastedSesame/20 pb-4 animate-in fade-in duration-200">
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-2" aria-label="Mobile navigation">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -116,7 +116,7 @@ export default function Header() {
               <div className="pt-2 px-4">
                 <div className="flex items-center space-x-2 text-xs text-toastedSesame/80">
                   <Flame className="w-3.5 h-3.5 text-roastedChilli" />
-                  <span>Daily 12:30 PM – 11:00 PM • Delivery in Rawalpindi & Islamabad</span>
+                  <span>Daily 12:30 PM – 11:00 PM • Delivery in Rawalpindi &amp; Islamabad</span>
                 </div>
               </div>
             </nav>

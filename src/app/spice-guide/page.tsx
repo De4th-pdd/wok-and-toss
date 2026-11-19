@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SpiceGuideSection from '@/components/SpiceGuideSection';
 import { siteConfig } from '@/lib/config';
-import { Flame, MessageCircle, ArrowLeft, ShieldCheck } from 'lucide-react';
+import { MessageCircle, ArrowLeft, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Signature Spice Guide | Customizable Heat Levels',
+  title: 'Spice Guide & Heat Levels',
   description:
     'Explore the official Wok & Toss spice scale: from mild garlic-soy chowmein to blistering firecracker chicken gravies. Tailor your heat level via WhatsApp in Rawalpindi & Islamabad.',
   alternates: {
@@ -27,17 +27,17 @@ export default function SpiceGuidePage() {
               className="inline-flex items-center space-x-1.5 text-xs font-semibold text-toastedSesame hover:text-warmPorcelain transition-colors mb-4"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Home</span>
+              <span>Back to home</span>
             </Link>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/30 bg-smokedSoy-900 text-xs font-semibold uppercase tracking-widest text-toastedSesame mb-4 ml-4">
-              <Flame className="w-3.5 h-3.5 text-roastedChilli" />
-              <span>Wok Heat Intelligence</span>
-            </div>
+            
+            <span className="text-xs font-semibold text-toastedSesame block mb-1">
+              Heat scale
+            </span>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-warmPorcelain">
-              The Official Wok &amp; Toss Spice Guide
+              The Wok &amp; Toss Spice Guide
             </h1>
             <p className="mt-4 text-base sm:text-lg text-ricePaper/85 leading-relaxed font-sans font-light">
-              We never lump Chinese cooking into a generic one-size-fits-all heat scale. Our spice profiles are engineered specifically for noodles, chicken gravies, and beef/prawn wok reductions.
+              We never lump Chinese cooking into a generic one-size-fits-all heat scale. Our spice profiles are tailored specifically for noodles, chicken gravies, and beef/prawn wok reductions.
             </p>
           </div>
         </div>
@@ -55,10 +55,10 @@ export default function SpiceGuidePage() {
             </div>
             <div className="space-y-3">
               <h2 className="font-serif text-2xl font-bold text-warmPorcelain">
-                The Wok &amp; Toss Spice Adjustment Promise
+                Spice adjustment policy
               </h2>
               <p className="text-sm text-ricePaper/85 leading-relaxed font-sans">
-                As stated directly on our original brand graphics: <em className="text-toastedSesame">&quot;Spice levels can be adjusted by contacting Wok &amp; Toss on WhatsApp.&quot;</em> Whether you have family members who prefer zero chili or cravers who demand extra bird&apos;s eye heat, our chefs adjust the wok seasoning for your specific order.
+                As stated directly on our brand graphics: <span className="text-toastedSesame font-medium">&quot;Spice levels can be adjusted by contacting Wok &amp; Toss on WhatsApp.&quot;</span> Whether you have family members who prefer zero chili or cravers who demand extra bird&apos;s eye heat, our chefs adjust the wok seasoning for your specific order.
               </p>
               <div className="pt-2">
                 <a
@@ -68,7 +68,7 @@ export default function SpiceGuidePage() {
                   className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-roastedChilli hover:bg-roastedChilli-hover text-warmPorcelain text-xs font-bold tracking-wide transition-all shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Request Custom Spice on WhatsApp</span>
+                  <span>Request custom spice on WhatsApp</span>
                 </a>
               </div>
             </div>

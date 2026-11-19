@@ -2,10 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import OrderStepSection from '@/components/OrderStepSection';
-import { MessageCircle, ArrowLeft, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, ShieldAlert } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How to Order | Direct WhatsApp Ordering Process',
+  title: 'How to Order via WhatsApp',
   description:
     'Learn how to order authentic wok-tossed Chinese food from Wok & Toss in Rawalpindi & Islamabad via WhatsApp. Simple 5-step process from menu to fresh delivery.',
   alternates: {
@@ -25,14 +25,14 @@ export default function HowToOrderPage() {
               className="inline-flex items-center space-x-1.5 text-xs font-semibold text-toastedSesame hover:text-warmPorcelain transition-colors mb-4"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Home</span>
+              <span>Back to home</span>
             </Link>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/30 bg-smokedSoy-950/80 text-xs font-semibold uppercase tracking-widest text-toastedSesame mb-4 ml-4">
-              <MessageCircle className="w-3.5 h-3.5 text-roastedChilli" />
-              <span>Ordering Transparency</span>
-            </div>
+            
+            <span className="text-xs font-semibold text-toastedSesame block mb-1">
+              Ordering process
+            </span>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-warmPorcelain">
-              The Wok &amp; Toss Ordering Experience
+              How to order at Wok &amp; Toss
             </h1>
             <p className="mt-4 text-base sm:text-lg text-ricePaper/80 leading-relaxed font-sans font-light">
               We operate an honest, kitchen-direct WhatsApp ordering funnel. Every meal is cooked to order specifically for your household, ensuring genuine wok hei and personalized spice levels.
@@ -53,7 +53,7 @@ export default function HowToOrderPage() {
             </div>
             <div className="space-y-3">
               <h2 className="font-serif text-2xl font-bold text-smokedSoy">
-                Why WhatsApp Ordering Instead of an Automated Cart?
+                Why WhatsApp ordering?
               </h2>
               <p className="text-sm text-mutedText leading-relaxed font-sans">
                 Unlike mass-production fast food chains, Wok &amp; Toss customizes every wok batch. Our kitchen team confirms live delivery availability for your specific Twin Cities sector, verifies current daily ingredient selections, and ensures your spice preferences are passed directly to the wok chef.

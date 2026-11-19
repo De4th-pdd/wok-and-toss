@@ -10,24 +10,19 @@ import FeaturedCarousel from '@/components/FeaturedCarousel';
 import LocalSeoFaq from '@/components/LocalSeoFaq';
 import {
   MessageCircle,
-  Flame,
   Clock,
   MapPin,
-  UtensilsCrossed,
   ArrowRight,
-  Sparkles,
 } from 'lucide-react';
 
 export default function HomePage() {
-  // Select authentic featured dishes that represent the core pillars of Wok & Toss
+  // Select authentic featured dishes representing core menu pillars
   const featuredDishes = MENU_ITEMS.filter((item) => item.isFeatured).slice(0, 6);
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* =========================================================
-          1. HERO SECTION: Food-Led, Premium Editorial
-          ========================================================= */}
-      <section className="relative min-h-[92vh] flex items-center bg-smokedSoy text-ricePaper overflow-hidden">
+      {/* 1. HERO SECTION: Food-Led & Direct */}
+      <section className="relative min-h-[90vh] flex items-center bg-smokedSoy text-ricePaper overflow-hidden">
         {/* Subtle background food video & ambient overlays */}
         <div className="absolute inset-0 z-0">
           <video
@@ -40,33 +35,27 @@ export default function HomePage() {
           >
             <source src="/assets/video/noodle-pull.mp4" type="video/mp4" />
           </video>
-          {/* Multi-layer gradient overlays for pristine readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-smokedSoy-950 via-smokedSoy-900/90 to-smokedSoy/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-smokedSoy via-transparent to-smokedSoy/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Column: Editorial Headline & Actions */}
+            {/* Left Column: Headlines & Direct Actions */}
             <div className="lg:col-span-7 space-y-6">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-smokedSoy-950/80 border border-toastedSesame/40 text-xs font-semibold uppercase tracking-widest text-toastedSesame shadow-md">
-                <Flame className="w-3.5 h-3.5 text-roastedChilli shrink-0" />
-                <span>Rawalpindi &amp; Islamabad • High-Heat Wok Hei</span>
-              </div>
+              <span className="text-xs font-semibold text-toastedSesame block">
+                Rawalpindi &amp; Islamabad • High-heat wok cooking
+              </span>
 
-              {/* Main Headline */}
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-warmPorcelain leading-[1.08]">
-                Hot, saucy, <br />
-                <span className="italic font-normal text-toastedSesame">wok-tossed</span> Chinese.
+                Hot, saucy, wok-tossed Chinese.
               </h1>
 
-              {/* Supporting Copy */}
               <p className="text-lg sm:text-xl text-ricePaper/85 leading-relaxed font-sans max-w-2xl font-light">
-                Chinese food for your cravings in Rawalpindi &amp; Islamabad. Freshly charred chowmein, rich simmering gravies, and customizable spice levels prepared from scratch for every order.
+                Chinese food for your cravings in Rawalpindi &amp; Islamabad. Freshly charred chowmein, rich simmering gravies, and customizable spice levels prepared to order.
               </p>
 
-              {/* Verified Operating Facts */}
+              {/* Operating Facts */}
               <div className="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-ricePaper/80 font-sans">
                 <div className="flex items-center space-x-2 bg-smokedSoy-100/60 px-3.5 py-2 rounded-xl border border-toastedSesame/20">
                   <Clock className="w-4 h-4 text-toastedSesame shrink-0" />
@@ -74,17 +63,17 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center space-x-2 bg-smokedSoy-100/60 px-3.5 py-2 rounded-xl border border-toastedSesame/20">
                   <MapPin className="w-4 h-4 text-toastedSesame shrink-0" />
-                  <span>Twin Cities Delivery Coverage</span>
+                  <span>Twin Cities delivery coverage</span>
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Actions */}
               <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Link
                   href="/menu"
                   className="inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full bg-roastedChilli hover:bg-roastedChilli-hover text-warmPorcelain font-bold text-base tracking-wide shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <span>Explore Menu</span>
+                  <span>Explore menu</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
@@ -99,19 +88,15 @@ export default function HomePage() {
                 </a>
               </div>
 
-              {/* Brand Mantra */}
-              <div className="pt-2 text-xs font-mono tracking-widest text-toastedSesame/70 uppercase">
+              <div className="pt-2 text-xs font-sans text-ricePaper/60">
                 &quot;Wok says toss.&quot; • WhatsApp: {siteConfig.phoneDisplay}
               </div>
             </div>
 
-            {/* Right Column: Hero Visual Feature */}
+            {/* Right Column: Hero Real Order Visual */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Decorative border frame */}
-                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-roastedChilli/40 via-toastedSesame/20 to-transparent blur-md -z-10" />
-
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-2 border-toastedSesame/30 bg-smokedSoy-950 shadow-2xl">
+                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-toastedSesame/30 bg-smokedSoy-950 shadow-2xl">
                   <Image
                     src="/assets/dishes/chilli-dry-and-chowmein-combo.webp"
                     alt="Authentic Wok & Toss Chilli Dry Chicken and Chicken Chowmein Order"
@@ -120,21 +105,20 @@ export default function HomePage() {
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-smokedSoy-950/90 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-smokedSoy-950/85 via-transparent to-transparent" />
 
-                  {/* Floating Appetite Pill */}
-                  <div className="absolute bottom-6 inset-x-6 p-4 rounded-2xl bg-smokedSoy-950/90 border border-toastedSesame/30 backdrop-blur-md">
+                  <div className="absolute bottom-5 inset-x-5 p-4 rounded-2xl bg-smokedSoy-950/90 border border-toastedSesame/30 backdrop-blur-md">
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-toastedSesame block">
-                          Real Order Fulfillment
+                        <span className="text-xs text-toastedSesame block font-medium">
+                          Fresh order fulfillment
                         </span>
                         <span className="font-serif text-lg font-bold text-warmPorcelain">
                           Chilli Dry &amp; Chowmein
                         </span>
                       </div>
-                      <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-roastedChilli text-warmPorcelain">
-                        Fiery Hot
+                      <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-roastedChilli text-warmPorcelain">
+                        Fiery heat
                       </span>
                     </div>
                   </div>
@@ -145,9 +129,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          2. THE WOK CRAFT EXPERIENCE: Appetite & Sizzle
-          ========================================================= */}
+      {/* 2. REAL FOOD & WOK CRAFT EXPERIENCE */}
       <section className="py-20 bg-warmPorcelain text-smokedSoy border-y border-ricePaper-dark/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -161,8 +143,8 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-[10px] font-mono text-warmPorcelain">
-                  Signature Chowmein
+                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-xs font-sans text-warmPorcelain">
+                  Classic Chicken Chowmein
                 </div>
               </div>
 
@@ -177,7 +159,7 @@ export default function HomePage() {
                 >
                   <source src="/assets/video/chilli-chicken.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-[10px] font-mono text-warmPorcelain">
+                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-xs font-sans text-warmPorcelain">
                   Sizzling Chilli Dry
                 </div>
               </div>
@@ -190,7 +172,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-[10px] font-mono text-warmPorcelain">
+                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-xs font-sans text-warmPorcelain">
                   Hot &amp; Sour Broth
                 </div>
               </div>
@@ -203,62 +185,50 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-[10px] font-mono text-warmPorcelain">
-                  3-Item Takeaway Box
+                <div className="absolute bottom-3 left-3 px-2 py-1 rounded bg-smokedSoy-950/80 text-xs font-sans text-warmPorcelain">
+                  Combo Takeaway Box
                 </div>
               </div>
             </div>
 
             {/* Narrative Editorial Column */}
             <div className="lg:col-span-6 space-y-6 lg:pl-6">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/40 bg-ricePaper text-xs font-semibold uppercase tracking-widest text-mutedText-dark">
-                <Sparkles className="w-3.5 h-3.5 text-roastedChilli" />
-                <span>Culinary Philosophy</span>
-              </div>
+              <span className="text-xs font-semibold text-mutedText block">
+                Fresh wok preparation
+              </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-smokedSoy leading-tight">
-                Real Wok Flame. <br />
-                <span className="italic font-normal text-wokCopper">Freshly Tossed to Order.</span>
+                Real wok heat. Tossed fresh to order.
               </h2>
               <p className="text-base sm:text-lg text-mutedText leading-relaxed font-sans">
-                At Wok &amp; Toss, every dish is seared individually over intense high-flame burners. We don&apos;t reheat pre-made food. The smoke of the wok, the crunch of fresh cabbage and carrots, the char of sliced chicken, and the aromatic burst of whole red chilies come together in minutes.
+                Every dish at Wok &amp; Toss is seared over high-heat gas burners. We don&apos;t reheat pre-cooked batches. The char of the wok, the crunch of sliced vegetables, tender chicken and beef cuts, and whole dried chilies come together in minutes.
               </p>
 
               <div className="space-y-4 pt-2">
-                <div className="flex items-start space-x-3.5">
-                  <div className="w-8 h-8 rounded-lg bg-roastedChilli/10 border border-roastedChilli/20 flex items-center justify-center shrink-0 mt-0.5">
-                    <Flame className="w-4 h-4 text-roastedChilli" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-base font-bold text-smokedSoy">
-                      Pure High-Heat Wok Hei
-                    </h3>
-                    <p className="text-sm text-mutedText mt-0.5">
-                      Authentic wok caramelization that gives our chowmein and gravies their signature smokiness.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-serif text-base font-bold text-smokedSoy">
+                    Authentic wok hei
+                  </h3>
+                  <p className="text-sm text-mutedText mt-0.5">
+                    High-heat wok caramelization that gives our noodles and gravies their distinctive smokiness.
+                  </p>
                 </div>
 
-                <div className="flex items-start space-x-3.5">
-                  <div className="w-8 h-8 rounded-lg bg-toastedSesame/15 border border-toastedSesame/30 flex items-center justify-center shrink-0 mt-0.5">
-                    <UtensilsCrossed className="w-4 h-4 text-toastedSesame-dark" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-base font-bold text-smokedSoy">
-                      Category-Specific Heat Customization
-                    </h3>
-                    <p className="text-sm text-mutedText mt-0.5">
-                      Tailor your spice level from mild garlic to firecracker chili directly when messaging on WhatsApp.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-serif text-base font-bold text-smokedSoy">
+                    Custom heat levels
+                  </h3>
+                  <p className="text-sm text-mutedText mt-0.5">
+                    Tailor your spice level from mild garlic to firecracker chili directly when messaging on WhatsApp.
+                  </p>
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-3">
                 <Link
                   href="/spice-guide"
-                  className="inline-flex items-center space-x-2 text-roastedChilli hover:text-roastedChilli-hover font-semibold text-sm group"
+                  className="inline-flex items-center space-x-1.5 text-roastedChilli hover:text-roastedChilli-hover font-semibold text-sm group"
                 >
-                  <span>Explore the full spice architecture</span>
+                  <span>Explore the spice guide</span>
                   <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                 </Link>
               </div>
@@ -267,29 +237,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          3. SIGNATURE DISH SPOTLIGHT
-          ========================================================= */}
+      {/* 3. FEATURED DISH SPOTLIGHT */}
       <section className="py-20 bg-warmPorcelain-card text-smokedSoy" id="featured-menu">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/40 bg-ricePaper text-xs font-semibold uppercase tracking-widest text-mutedText-dark mb-3">
-                <Flame className="w-3.5 h-3.5 text-roastedChilli" />
-                <span>Verified Brand Specialties</span>
-              </div>
+              <span className="text-xs font-semibold text-mutedText block mb-1">
+                From our wok
+              </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-smokedSoy">
-                Featured Wok Creations
+                Featured dishes
               </h2>
-              <p className="mt-3 text-base text-mutedText max-w-xl font-sans">
-                Tasted, verified, and celebrated. These signature dishes define the Wok &amp; Toss standard across Rawalpindi and Islamabad.
+              <p className="mt-2 text-base text-mutedText max-w-xl font-sans">
+                Chowmein, sizzling gravies, and slow-simmered broths prepared fresh daily across Rawalpindi and Islamabad.
               </p>
             </div>
             <Link
               href="/menu"
               className="inline-flex items-center space-x-2 px-6 py-3 rounded-full border border-smokedSoy/20 hover:border-smokedSoy hover:bg-smokedSoy hover:text-warmPorcelain transition-all text-sm font-semibold self-start md:self-auto shrink-0"
             >
-              <span>View Full Menu</span>
+              <span>View full menu</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -303,47 +270,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          4. THE SPICE GUIDE SECTION (Recreated in full HTML/CSS)
-          ========================================================= */}
+      {/* 4. THE SPICE GUIDE SECTION */}
       <SpiceGuideSection />
 
-      {/* =========================================================
-          5. THE ORIGINAL BRAND CAROUSEL SLIDESHOW
-          ========================================================= */}
-      <FeaturedCarousel />
-
-      {/* =========================================================
-          6. HOW TO ORDER (5-step process + Interactive Composer)
-          ========================================================= */}
+      {/* 5. HOW TO ORDER (5-step process + Interactive Composer) */}
       <OrderStepSection />
 
-      {/* =========================================================
-          7. LOCAL SERVICE AREA & OPENING HOURS
-          ========================================================= */}
+      {/* 6. ORIGINAL BRAND CAROUSEL ARCHIVE */}
+      <FeaturedCarousel />
+
+      {/* 7. LOCAL SERVICE AREA & OPENING HOURS */}
       <section className="py-20 bg-ricePaper text-smokedSoy border-t border-ricePaper-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-warmPorcelain rounded-3xl p-8 sm:p-12 border border-ricePaper-dark/80 shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/40 bg-ricePaper text-xs font-semibold uppercase tracking-widest text-mutedText-dark">
-                  <MapPin className="w-3.5 h-3.5 text-roastedChilli" />
-                  <span>Twin Cities Coverage</span>
-                </div>
+                <span className="text-xs font-semibold text-mutedText block">
+                  Twin Cities delivery
+                </span>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-smokedSoy">
-                  Serving Rawalpindi &amp; Islamabad Daily
+                  Serving Rawalpindi &amp; Islamabad daily
                 </h2>
                 <p className="text-base text-mutedText leading-relaxed font-sans max-w-2xl">
-                  We prepare fresh Chinese meals seven days a week from 12:30 PM to 11:00 PM. Whether you need a quick lunch box in Saddar or Bahria, or a family banquet spread across Islamabad sectors, message us with your area and party count for instant availability.
+                  We prepare fresh Chinese meals seven days a week from 12:30 PM to 11:00 PM. Whether you need a quick lunch box or a family dinner spread across Islamabad sectors, message us with your area and party count for instant availability.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-sm">
                   <div className="p-4 rounded-xl bg-warmPorcelain-card border border-ricePaper-dark/60">
-                    <span className="block font-serif font-bold text-smokedSoy text-base">Kitchen Operating Hours</span>
-                    <span className="text-mutedText block mt-1">Monday – Sunday: 12:30 PM – 11:00 PM</span>
+                    <span className="block font-serif font-bold text-smokedSoy text-base">Kitchen operating hours</span>
+                    <span className="text-mutedText block mt-1">Every day, 12:30 PM – 11:00 PM</span>
                   </div>
                   <div className="p-4 rounded-xl bg-warmPorcelain-card border border-ricePaper-dark/60">
-                    <span className="block font-serif font-bold text-smokedSoy text-base">WhatsApp Hot Line</span>
-                    <span className="text-mutedText block mt-1">+92 319 1932923 (Fastest Response)</span>
+                    <span className="block font-serif font-bold text-smokedSoy text-base">WhatsApp hotline</span>
+                    <span className="text-mutedText block mt-1">+92 319 1932923</span>
                   </div>
                 </div>
               </div>
@@ -361,17 +319,17 @@ export default function HomePage() {
                 <span className="font-serif text-xl font-bold text-warmPorcelain">
                   WOK &amp; TOSS
                 </span>
-                <span className="text-xs text-toastedSesame uppercase tracking-widest mt-0.5">
-                  Freshly Tossed
+                <span className="text-xs text-toastedSesame mt-0.5">
+                  Chinese Food • Freshly Tossed
                 </span>
                 <a
                   href={siteConfig.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-roastedChilli hover:bg-roastedChilli-hover text-warmPorcelain text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+                  className="mt-6 w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-roastedChilli hover:bg-roastedChilli-hover text-warmPorcelain text-xs font-semibold tracking-wide transition-all shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Send WhatsApp Request</span>
+                  <span>Send WhatsApp message</span>
                 </a>
               </div>
             </div>
@@ -379,23 +337,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          8. LOCAL TWIN CITIES FAQS
-          ========================================================= */}
+      {/* 8. LOCAL TWIN CITIES FAQS */}
       <LocalSeoFaq />
 
-      {/* =========================================================
-          9. FINAL PROMINENT WHATSAPP CTA
-          ========================================================= */}
+      {/* 9. FINAL WHATSAPP CALL TO ACTION */}
       <section className="py-20 bg-smokedSoy text-ricePaper relative overflow-hidden border-t border-toastedSesame/30">
-        <div className="absolute inset-0 bg-radial-gradient from-roastedChilli/15 via-transparent to-transparent opacity-50" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-toastedSesame/40 bg-smokedSoy-950/80 text-xs font-semibold uppercase tracking-widest text-toastedSesame">
-            <Flame className="w-3.5 h-3.5 text-roastedChilli" />
-            <span>Ready for your craving?</span>
-          </div>
+          <span className="text-xs font-semibold text-toastedSesame block">
+            Ready for your craving?
+          </span>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-warmPorcelain tracking-tight leading-tight">
-            Craving Authentic Chinese in the Twin Cities?
+            Order authentic Chinese in the Twin Cities
           </h2>
           <p className="text-base sm:text-lg text-ricePaper/80 max-w-2xl mx-auto font-sans leading-relaxed">
             Message <span className="text-warmPorcelain font-semibold">&quot;MENU&quot;</span> on WhatsApp, specify your location and number of people ordering, and receive today&apos;s verified menu and delivery arrangements.
@@ -415,12 +367,12 @@ export default function HomePage() {
               href="/menu"
               className="inline-flex items-center space-x-2 px-7 py-4 rounded-full bg-smokedSoy-100 hover:bg-smokedSoy-50 text-warmPorcelain border border-toastedSesame/30 text-base font-semibold transition-all"
             >
-              <span>Explore All Dishes</span>
+              <span>Explore all dishes</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="pt-4 text-xs text-toastedSesame font-mono">
+          <div className="pt-4 text-xs text-toastedSesame font-sans">
             WhatsApp Hotline: +92 319 1932923 • Daily 12:30 PM – 11:00 PM
           </div>
         </div>

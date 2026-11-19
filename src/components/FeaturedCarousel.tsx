@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Flame } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const SLIDES = [
   {
@@ -46,7 +46,7 @@ const SLIDES = [
     src: '/assets/slides/slide-8-prawns-platters.webp',
   },
   {
-    title: 'Broke But Hungry Student Deals',
+    title: 'Student Deals & Combos',
     subtitle: 'Budget Chowmein & Appetizer Combos',
     src: '/assets/slides/slide-9-student-deals.webp',
   },
@@ -64,40 +64,39 @@ export default function FeaturedCarousel() {
   };
 
   return (
-    <section className="py-20 bg-smokedSoy text-ricePaper overflow-hidden border-t border-toastedSesame/20" id="brand-archives">
+    <section className="py-16 bg-smokedSoy text-ricePaper overflow-hidden border-t border-toastedSesame/20" id="brand-archives">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/40 bg-smokedSoy-950/80 text-xs font-semibold uppercase tracking-widest text-toastedSesame mb-4">
-            <Flame className="w-3.5 h-3.5 text-roastedChilli" />
-            <span>Official Brand Visual Archive</span>
-          </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-warmPorcelain">
-            The Original Wok &amp; Toss Carousel
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs font-semibold text-toastedSesame block mb-1">
+            Brand archive
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-warmPorcelain">
+            Original menu &amp; spice graphics
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-ricePaper/80 leading-relaxed font-sans">
-            Inspect the high-resolution brand slides that establish Wok &amp; Toss&apos;s signature black-and-gold visual identity, culinary categories, and spice tiers.
+          <p className="mt-3 text-sm text-ricePaper/75 leading-relaxed font-sans">
+            Reference the original black-and-gold visual slides that establish Wok &amp; Toss’s dish categories and heat profiles.
           </p>
         </div>
 
         {/* Carousel Showcase */}
-        <div className="mt-12 relative max-w-2xl mx-auto">
-          <div className="relative aspect-[3/4] sm:aspect-[4/5] w-full rounded-3xl overflow-hidden border-2 border-toastedSesame/30 bg-smokedSoy-950 shadow-2xl">
+        <div className="mt-10 relative max-w-xl mx-auto">
+          <div className="relative aspect-[3/4] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden border border-toastedSesame/30 bg-smokedSoy-950 shadow-xl">
             <Image
               src={SLIDES[currentIndex].src}
               alt={SLIDES[currentIndex].title}
               fill
-              sizes="(max-width: 768px) 100vw, 700px"
+              sizes="(max-width: 768px) 100vw, 600px"
               className="object-contain"
               priority={currentIndex === 0}
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-smokedSoy-950 via-smokedSoy-950/80 to-transparent p-6 text-center">
-              <span className="text-xs uppercase tracking-widest text-toastedSesame font-semibold block">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-smokedSoy-950 via-smokedSoy-950/80 to-transparent p-5 text-center">
+              <span className="text-xs text-toastedSesame font-medium block">
                 Slide {currentIndex + 1} of {SLIDES.length}
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-warmPorcelain mt-1">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-warmPorcelain mt-0.5">
                 {SLIDES[currentIndex].title}
               </h3>
-              <p className="text-xs sm:text-sm text-ricePaper/70 mt-0.5">
+              <p className="text-xs text-ricePaper/70 mt-0.5">
                 {SLIDES[currentIndex].subtitle}
               </p>
             </div>
@@ -107,39 +106,39 @@ export default function FeaturedCarousel() {
           <button
             type="button"
             onClick={prevSlide}
-            aria-label="Previous Slide"
-            className="absolute left-2 sm:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-smokedSoy-950/90 border border-toastedSesame/40 text-warmPorcelain hover:text-toastedSesame hover:bg-smokedSoy flex items-center justify-center shadow-lg transition-all focus:outline-none"
+            aria-label="Previous slide"
+            className="absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-smokedSoy-950/90 border border-toastedSesame/40 text-warmPorcelain hover:text-toastedSesame hover:bg-smokedSoy flex items-center justify-center shadow-lg transition-all focus:outline-none"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             type="button"
             onClick={nextSlide}
-            aria-label="Next Slide"
-            className="absolute right-2 sm:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-smokedSoy-950/90 border border-toastedSesame/40 text-warmPorcelain hover:text-toastedSesame hover:bg-smokedSoy flex items-center justify-center shadow-lg transition-all focus:outline-none"
+            aria-label="Next slide"
+            className="absolute right-2 sm:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-smokedSoy-950/90 border border-toastedSesame/40 text-warmPorcelain hover:text-toastedSesame hover:bg-smokedSoy flex items-center justify-center shadow-lg transition-all focus:outline-none"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Thumbnail Selector Strip */}
-        <div className="mt-8 flex justify-center items-center gap-2 overflow-x-auto pb-4 max-w-3xl mx-auto px-4">
+        <div className="mt-6 flex justify-center items-center gap-2 overflow-x-auto pb-2 max-w-2xl mx-auto px-4">
           {SLIDES.map((slide, index) => (
             <button
               key={slide.title}
               onClick={() => setCurrentIndex(index)}
-              className={`relative w-14 h-18 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${
+              className={`relative w-12 h-16 rounded-md overflow-hidden border transition-all shrink-0 ${
                 currentIndex === index
-                  ? 'border-roastedChilli scale-110 shadow-lg'
+                  ? 'border-roastedChilli scale-105 shadow-md'
                   : 'border-toastedSesame/20 opacity-60 hover:opacity-100'
               }`}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`View slide ${index + 1}`}
             >
               <Image
                 src={slide.src}
                 alt={slide.title}
-                width={56}
-                height={72}
+                width={48}
+                height={64}
                 className="w-full h-full object-cover"
               />
             </button>

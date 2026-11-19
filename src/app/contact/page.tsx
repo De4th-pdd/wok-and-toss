@@ -15,7 +15,7 @@ import {
 import { FacebookIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Service Area & Contact | Rawalpindi & Islamabad',
+  title: 'Service Area & Contact',
   description:
     'Verified contact information, operating hours, and service areas for Wok & Toss Chinese Food in Rawalpindi and Islamabad. Order directly via WhatsApp.',
   alternates: {
@@ -35,14 +35,14 @@ export default function ContactPage() {
               className="inline-flex items-center space-x-1.5 text-xs font-semibold text-toastedSesame hover:text-warmPorcelain transition-colors mb-4"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Home</span>
+              <span>Back to home</span>
             </Link>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-toastedSesame/30 bg-smokedSoy-950/80 text-xs font-semibold uppercase tracking-widest text-toastedSesame mb-4 ml-4">
-              <MapPin className="w-3.5 h-3.5 text-roastedChilli" />
-              <span>Service Area &amp; Business Info</span>
-            </div>
+            
+            <span className="text-xs font-semibold text-toastedSesame block mb-1">
+              Service area &amp; business info
+            </span>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-warmPorcelain">
-              About Wok &amp; Toss &amp; Delivery Coverage
+              About Wok &amp; Toss &amp; delivery coverage
             </h1>
             <p className="mt-4 text-base sm:text-lg text-ricePaper/80 leading-relaxed font-sans font-light">
               Crafting hot, saucy, wok-tossed Chinese food fresh for customers across Rawalpindi and Islamabad.
@@ -58,10 +58,10 @@ export default function ContactPage() {
             <div className="bg-warmPorcelain-card p-8 rounded-3xl border border-ricePaper-dark/80 shadow-sm space-y-6">
               <div>
                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-smokedSoy">
-                  Verified Business Information
+                  Operating details
                 </h2>
                 <p className="mt-2 text-sm text-mutedText leading-relaxed font-sans">
-                  Wok &amp; Toss operates as a dedicated cloud-kitchen craft brand delivering high-heat Chinese meals directly to customers across the Twin Cities.
+                  Wok &amp; Toss delivers freshly prepared high-heat Chinese meals directly to customers across the Twin Cities.
                 </p>
               </div>
 
@@ -69,10 +69,10 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3.5 p-4 rounded-2xl bg-warmPorcelain border border-ricePaper-dark/60">
                   <Clock className="w-5 h-5 text-roastedChilli mt-0.5 shrink-0" />
                   <div>
-                    <span className="font-bold text-smokedSoy block">Kitchen Operating Hours</span>
+                    <span className="font-bold text-smokedSoy block">Kitchen operating hours</span>
                     <span className="text-mutedText">Every day, 12:30 PM – 11:00 PM</span>
-                    <span className="text-xs text-toastedSesame-dark block mt-0.5">
-                      Open Monday through Sunday for lunch, dinner &amp; late cravings.
+                    <span className="text-xs text-mutedText block mt-0.5">
+                      Open Monday through Sunday for lunch, dinner, and evening cravings.
                     </span>
                   </div>
                 </div>
@@ -80,10 +80,10 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3.5 p-4 rounded-2xl bg-warmPorcelain border border-ricePaper-dark/60">
                   <MapPin className="w-5 h-5 text-roastedChilli mt-0.5 shrink-0" />
                   <div>
-                    <span className="font-bold text-smokedSoy block">Service Area</span>
+                    <span className="font-bold text-smokedSoy block">Service area</span>
                     <span className="text-mutedText">Rawalpindi and Islamabad, Pakistan</span>
                     <span className="text-xs text-mutedText/80 block mt-0.5">
-                      Delivering across both cities. Confirm your specific sector/neighborhood via WhatsApp.
+                      Delivering across both cities. Confirm your specific sector or neighborhood via WhatsApp.
                     </span>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3.5 p-4 rounded-2xl bg-warmPorcelain border border-ricePaper-dark/60">
                   <Phone className="w-5 h-5 text-roastedChilli mt-0.5 shrink-0" />
                   <div>
-                    <span className="font-bold text-smokedSoy block">Official WhatsApp Helpline</span>
+                    <span className="font-bold text-smokedSoy block">WhatsApp helpline</span>
                     <a
                       href={siteConfig.whatsappUrl}
                       target="_blank"
@@ -101,7 +101,7 @@ export default function ContactPage() {
                       {siteConfig.phoneDisplay}
                     </a>
                     <span className="text-xs text-mutedText/80 block mt-0.5">
-                      Direct channel for menu requests, custom spice adjustments &amp; order dispatch.
+                      Direct channel for menu requests, custom spice adjustments, and order dispatch.
                     </span>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3.5 p-4 rounded-2xl bg-warmPorcelain border border-ricePaper-dark/60">
                   <FacebookIcon className="w-5 h-5 text-roastedChilli mt-0.5 shrink-0" />
                   <div>
-                    <span className="font-bold text-smokedSoy block">Official Facebook Page</span>
+                    <span className="font-bold text-smokedSoy block">Official Facebook page</span>
                     <a
                       href={siteConfig.facebookUrl}
                       target="_blank"
@@ -122,11 +122,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* No invented address statement */}
+              {/* Physical Location Notice */}
               <div className="p-4 rounded-2xl bg-ricePaper/60 border border-toastedSesame/30 text-xs text-mutedText leading-relaxed flex items-start space-x-2.5">
                 <ShieldCheck className="w-4 h-4 text-toastedSesame-dark shrink-0 mt-0.5" />
                 <span>
-                  <strong>Note on Physical Location:</strong> Wok &amp; Toss currently operates on a direct delivery model for Rawalpindi and Islamabad. We do not publish an unconfirmed public dining room address to avoid misleading visitors. All orders are placed via WhatsApp.
+                  <strong>Note on location:</strong> Wok &amp; Toss operates on a direct delivery model for Rawalpindi and Islamabad. We do not publish an unconfirmed public dining room address to avoid misleading visitors. All orders are placed via WhatsApp.
                 </span>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
               <h3 className="font-serif text-2xl font-bold text-warmPorcelain">
                 WOK &amp; TOSS
               </h3>
-              <span className="text-xs uppercase tracking-widest text-toastedSesame font-medium mt-1">
+              <span className="text-xs text-toastedSesame font-medium mt-1">
                 Chinese Food • Freshly Tossed
               </span>
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   className="w-full inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-smokedSoy-100 hover:bg-smokedSoy-50 text-warmPorcelain border border-toastedSesame/30 text-xs font-semibold transition-all"
                 >
                   <FacebookIcon className="w-4 h-4" />
-                  <span>Visit Facebook Profile</span>
+                  <span>Visit Facebook profile</span>
                 </a>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function ContactPage() {
             {/* Quick Ordering Checklist */}
             <div className="bg-warmPorcelain-card p-6 rounded-2xl border border-ricePaper-dark/80">
               <h4 className="font-serif text-lg font-bold text-smokedSoy mb-3">
-                When You Message WhatsApp:
+                When you message on WhatsApp:
               </h4>
               <ul className="space-y-2 text-xs text-mutedText font-sans">
                 <li className="flex items-center space-x-2">
@@ -190,7 +190,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-roastedChilli shrink-0" />
-                  <span>Provide your delivery area / sector.</span>
+                  <span>Provide your delivery area or sector.</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-roastedChilli shrink-0" />

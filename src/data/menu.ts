@@ -136,7 +136,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: 'House Special Chowmein',
     category: 'noodles',
     description: 'Our premier noodle feast: tender chicken, prime beef strips, ocean prawns, and button mushrooms tossed in rich master sauce.',
-    image: '/assets/dishes/signature-chowmein.webp',
+    image: null,
     spiceLevel: 'Low to Medium',
     spiceHeatValue: 2,
     portionSize: 'Med (Serves 1-2) / Lrg (Serves 3-4)',
@@ -758,7 +758,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: 'House Special Soup',
     category: 'soups',
     description: 'Our most lavish master broth: loaded with chicken, prawns, black wood ear mushrooms, and crisp winter vegetables.',
-    image: '/assets/dishes/hot-and-sour-soup.webp',
+    image: null,
     spiceLevel: 'Mild',
     spiceHeatValue: 1,
     portionSize: 'Med (1-2 persons) / Lrg (3-4 persons)',
@@ -935,7 +935,7 @@ export const MENU_ITEMS: MenuItem[] = [
 // Helper to format customer price cleanly without leaking internal costs
 export function formatCustomerPrice(item: MenuItem): string {
   if (item.priceConfirmationStatus !== 'confirmed' || item.customerPrice === null) {
-    return "Ask for today's price";
+    return "Please confirm today's price";
   }
 
   if (item.customerPriceLarge) {
@@ -954,7 +954,9 @@ export function getWhatsAppOrderUrl(item?: MenuItem, spiceSelection?: string): s
   }
 
   const spice = spiceSelection || item.spiceLevel;
-  const priceSnippet = item.customerPrice ? `(approx Rs. ${item.customerPrice})` : '';
-  const message = `Hi Wok & Toss! I'd like to order: ${item.name} ${priceSnippet}. Preferred Spice: ${spice}. Please confirm today's price and availability for my area.`;
+  const priceSnippet = item.customerPrice
+    ? `(Rs. ${item.customerPrice.toLocaleString()})`
+    : `(Please confirm today's price)`;
+  const message = `Hi Wok & Toss! I'd like to order: ${item.name} ${priceSnippet}. Preferred spice: ${spice}. Please confirm today's price and availability for my area.`;
   return `${base}?text=${encodeURIComponent(message)}`;
 }
